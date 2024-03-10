@@ -5,3 +5,35 @@ import numpy as np
 
 df = pd.read_csv('ExG-ApplStat.dat', sep='|')
 df.head()
+
+# Histogram
+
+plt.hist(df['S'])
+plt.xlabel('Power Plant Net Capacity')
+plt.ylabel('Frequency')
+plt.title('Frequency of Power Plant Net Capacity')
+plt.show()
+
+plt.hist(df['C'])
+plt.xlabel('Cost in Dollars x10^-4')
+plt.ylabel('Frequency')
+plt.title('Frequency of Cost in Dollars')
+plt.show()
+
+time = df['T2'] - df['T1']
+plt.hist(time)
+plt.xlabel('Time')
+plt.ylabel('Frequency')
+plt.title('Frequency')
+plt.show()
+
+# Boxplot
+
+sns.boxplot(x='PT', y='C', data=df)
+plt.show()
+sns.boxplot(x='PR', y='C', data=df)
+plt.show()
+sns.boxplot(x='CT', y='C', data=df)
+plt.show()
+sns.boxplot(x='BW', y='C', data=df)
+plt.show()
