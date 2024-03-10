@@ -3,5 +3,5 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-df = pd.read_csv('ApplStat-ExampleG.dat', sep='|')
+df = pd.read_csv('ExG-ApplStat.dat', sep='|')
 df.head()
